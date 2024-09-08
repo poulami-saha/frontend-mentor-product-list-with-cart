@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: #fcf8f6;
+  padding-inline: 25px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-block: 5px;
+}
+.deserts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .left {
+    flex: 2.5;
+    padding: 16px;
+  }
+}

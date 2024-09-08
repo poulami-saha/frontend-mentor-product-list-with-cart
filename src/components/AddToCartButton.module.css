@@ -1,0 +1,65 @@
+.centeredButton {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px 25px;
+  background-color: white; /* Customize the button color */
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #260f08;
+  border: 1px solid #87635a;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.text {
+  line-height: 0px;
+  font-weight: normal;
+}
+
+.centeredCountButton {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px 25px;
+  background-color: #c73b0f;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  border: 1px solid #87635a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.countingIcon {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media (min-width: 960px) {
+  .icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  .centeredButton {
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+}

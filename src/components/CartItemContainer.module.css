@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #caafa7;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+}
+.detailsContent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.count {
+  color: #c73b0f;
+  font-weight: bold;
+}
+.countingIcon {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #87635a;
+  border-radius: 50%;
+}
+.totalPrice {
+  color: #87635a;
+  font-weight: bold;
+}
+.individualPrice {
+  color: #ad8a85;
+  font-weight: normal;
+}

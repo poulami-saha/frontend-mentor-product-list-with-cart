@@ -1,0 +1,49 @@
+.price {
+  font-size: small;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #caafa7;
+  padding-block: 20px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+}
+.detailsContent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: small;
+}
+.count {
+  color: #c73b0f;
+  font-weight: bold;
+}
+.logo {
+  height: 40px;
+  width: 40px;
+}
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.name {
+  line-height: 0px;
+  font-weight: bold;
+  font-size: small;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+}
+.cartContainer {
+  background-color: #f5eeec;
+  padding-inline: 20px;
+}

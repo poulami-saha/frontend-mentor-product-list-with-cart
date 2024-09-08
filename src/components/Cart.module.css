@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  margin-block: 30px;
+  width: 100%;
+}
+.header {
+  color: #c73b0f;
+  font-weight: bold;
+}
+.content {
+  text-align: center;
+}
+.text {
+  font-weight: 500;
+  color: #87635a;
+}
+
+.noteSection {
+  background-color: #f5eeec;
+  display: flex;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  padding-block: 10px;
+}
+.note {
+  color: #87635a;
+}
+.submit {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #c73b0f;
+  border: none;
+  color: antiquewhite;
+  font-weight: bold;
+  padding-block: 20px;
+  margin-top: 30px;
+  font-size: large;
+}
+
+@media (min-width: 960px) {
+  .container {
+    flex: 1;
+    width: auto;
+    height: auto;
+    padding: 16px;
+  }
+}

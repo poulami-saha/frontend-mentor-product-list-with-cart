@@ -1,0 +1,27 @@
+.tick {
+  height: 40px;
+  width: 40px;
+}
+.submit {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #c73b0f;
+  border: none;
+  color: antiquewhite;
+  font-weight: bold;
+  padding-block: 10px;
+  margin: 20px;
+  font-size: medium;
+}
+.header {
+  font-size: xx-large;
+}
+.note {
+  color: #87635a;
+  line-height: 0px;
+  font-weight: 300;
+  font-size: small;
+}
+.container {
+  border-radius: 30px;
+}
