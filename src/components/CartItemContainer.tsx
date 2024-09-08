@@ -20,10 +20,12 @@ const CartItemContainer: React.FC<{ cartItem: CartItem }> = ({ cartItem }) => {
   return (
     <div className={styles.container}>
       <div className={styles.details}>
-        <h4>{cartItem.name}</h4>
+        <h4 className={styles.name}>{cartItem.name}</h4>
         <div className={styles.detailsContent}>
           <p className={styles.count}>{cartItem.quantity}x </p>
-          <p className={styles.individualPrice}>@{cartItem.individualPrice}</p>
+          <p className={styles.individualPrice}>
+            @ ${cartItem.individualPrice}
+          </p>
           <p className={styles.totalPrice}>${cartItem.totalItemPrice}</p>
         </div>
       </div>

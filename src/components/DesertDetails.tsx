@@ -16,16 +16,12 @@ const DesertDetails: React.FC<{ desert: Desert }> = ({ desert }) => {
       if (screenWidth < 768) {
         return desert.image.mobile;
       }
-      if (screenWidth < 946 && screenWidth >= 768) {
+      if (screenWidth < 960 && screenWidth >= 768) {
         return desert.image.tablet;
       }
       return desert.image.desktop;
     });
   }, [desert, screenWidth]);
-
-  useEffect(() => {
-    console.log(state.items);
-  }, [state.items]);
 
   const addToCartHandler = () => {
     dispatch({
@@ -40,6 +36,7 @@ const DesertDetails: React.FC<{ desert: Desert }> = ({ desert }) => {
       },
     });
   };
+
   const removeFromCartHandler = () => {
     dispatch({
       type: "REMOVE_FROM_CART",
@@ -57,14 +54,19 @@ const DesertDetails: React.FC<{ desert: Desert }> = ({ desert }) => {
   const currentItem = state.items.find(
     (item: CartItem) => item.id === desert.id
   );
+  const isItemInCart =
+    state.items.find((item) => item.id === desert.id) !== undefined;
+
   return (
     <Grid key={desert.id} size={{ xs: 1, sm: 4, md: 4 }}>
-      <div className={styles.imageContainer}>
-        <img src={imageSrc} alt="Desert Image" className={styles.desertImage} />
+      <div
+        className={`${styles.imageContainer} ${
+          isItemInCart ? styles.highlighted : ""
+        }`}
+      >
+        <img src={imageSrc} alt="Desert" className={styles.desertImage} />
         <AddToCart
-          isItemInCart={
-            state.items.find((item) => item.id === desert.id) !== undefined
-          }
+          isItemInCart={isItemInCart}
           count={currentItem?.quantity ?? 0}
           addToCart={addToCartHandler}
           removeFromCart={removeFromCartHandler}

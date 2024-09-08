@@ -15,7 +15,7 @@ const CartDetails = () => {
                 <div className={styles.detailsContent}>
                   <p className={styles.count}>{cartItem.quantity}x </p>
                   <p className={styles.individualPrice}>
-                    @{cartItem.individualPrice}
+                    @ ${cartItem.individualPrice}
                   </p>
                 </div>
               </div>

@@ -6,6 +6,9 @@
   padding-bottom: 30px;
   border-bottom: 1px solid #caafa7;
 }
+.name {
+  font-weight: 600;
+}
 .details {
   display: flex;
   flex-direction: column;
@@ -18,7 +21,7 @@
 }
 .count {
   color: #c73b0f;
-  font-weight: bold;
+  font-weight: 600;
 }
 .countingIcon {
   width: 15px;
@@ -28,7 +31,7 @@
 }
 .totalPrice {
   color: #87635a;
-  font-weight: bold;
+  font-weight: 600;
 }
 .individualPrice {
   color: #ad8a85;

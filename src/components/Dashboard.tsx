@@ -7,8 +7,8 @@ import Grid from "@mui/material/Grid2";
 
 const Dashboard = () => {
   return (
-    <div className={styles.wrapper}>
-      <h1>Desserts</h1>
+    <>
+      <h1 className={styles.header}>Desserts</h1>
       <div className={styles.container}>
         <Container className={styles.left}>
           <Grid
@@ -21,10 +21,9 @@ const Dashboard = () => {
             })}
           </Grid>
         </Container>
-
         <Cart />
       </div>
-    </div>
+    </>
   );
 };
 export default Dashboard;

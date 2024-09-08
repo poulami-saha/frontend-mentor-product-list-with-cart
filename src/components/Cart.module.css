@@ -21,16 +21,21 @@
 }
 
 .noteSection {
-  background-color: #f5eeec;
+  background-color: #fcf8f6;
   display: flex;
   border-radius: 10px;
   text-align: center;
   justify-content: center;
   gap: 10px;
   padding-block: 10px;
+  font-weight: 400;
 }
 .note {
-  color: #87635a;
+  color: #260f08;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
 }
 .submit {
   width: 100%;
