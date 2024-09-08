@@ -61,5 +61,7 @@
   .centeredButton {
     font-size: 12px;
     padding: 0px 10px;
+    width: 150px;
+    justify-content: center;
   }
 }

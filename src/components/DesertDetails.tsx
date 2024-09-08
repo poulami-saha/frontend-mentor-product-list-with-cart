@@ -23,6 +23,10 @@ const DesertDetails: React.FC<{ desert: Desert }> = ({ desert }) => {
     });
   }, [desert, screenWidth]);
 
+  const currentItem = state.items.find(
+    (item: CartItem) => item.id === desert.id
+  );
+
   const addToCartHandler = () => {
     dispatch({
       type: "ADD_TO_CART",
@@ -38,22 +42,32 @@ const DesertDetails: React.FC<{ desert: Desert }> = ({ desert }) => {
   };
 
   const removeFromCartHandler = () => {
-    dispatch({
-      type: "REMOVE_FROM_CART",
-      payload: {
-        id: desert.id,
-        name: desert.name,
-        individualPrice: desert.price,
-        totalItemPrice: desert.price,
-        imageSrc: desert.image.thumbnail,
-        quantity: 1,
-      },
-    });
+    if (currentItem?.quantity === 1) {
+      dispatch({
+        type: "DELETE_ITEM",
+        payload: {
+          id: desert.id,
+          name: desert.name,
+          individualPrice: desert.price,
+          totalItemPrice: desert.price,
+          imageSrc: desert.image.thumbnail,
+          quantity: 1,
+        },
+      });
+    } else {
+      dispatch({
+        type: "REMOVE_FROM_CART",
+        payload: {
+          id: desert.id,
+          name: desert.name,
+          individualPrice: desert.price,
+          totalItemPrice: desert.price,
+          imageSrc: desert.image.thumbnail,
+          quantity: 1,
+        },
+      });
+    }
   };
-
-  const currentItem = state.items.find(
-    (item: CartItem) => item.id === desert.id
-  );
   const isItemInCart =
     state.items.find((item) => item.id === desert.id) !== undefined;
 

@@ -18,7 +18,9 @@ const Cart = () => {
   };
   return (
     <div className={styles.container}>
-      <h2 className={styles.header}>Your Cart ({state.totalQuantity})</h2>
+      <h2 className={styles.header}>
+        Your Cart ({state.totalQuantity > 0 ? state.totalQuantity : 0})
+      </h2>
       {state.totalQuantity === 0 && (
         <div className={styles.content}>
           <img src={empty} alt="Empty Cart" />
